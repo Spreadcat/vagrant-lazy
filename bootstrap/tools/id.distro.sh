@@ -31,8 +31,12 @@ case "${INFOSTRING}" in
     TDISTRO='ubuntu'
     TRELEASE=14.04 
     ;;
+  'Red Hat Enterprise Linux Server release 7.2 (Maipo)')
+    TDISTRO='redhat'
+    TRELEASE=7.2
+    ;;
   *)
-    echo 'No known system found.'
+    echo "No known system found for ${INFOSTRING}."
     exit 1
     ;;
 esac

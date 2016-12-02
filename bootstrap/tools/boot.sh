@@ -54,10 +54,17 @@ if [[ $hostname != '' ]]; then
   fi
 
   # Update the hostname for some systems
-  if [ "$TDISTRO" == 'centos' ]; then
-    echo "Setting hostname to $hostname"
-    hostnamectl set-hostname ${hostname}
-  fi
+  case ${TDISTRO} in
+    centos|redhat)
+      
+      case ${TRELEASE} in
+        7.2|7)
+          echo "Setting hostname to ${hostname}."
+          hostnamectl set-hostname ${hostname}
+          ;;
+      esac
+      ;;
+  esac
 fi
 
 # Include the install files based on tags.
