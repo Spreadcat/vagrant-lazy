@@ -2,7 +2,7 @@
 echo 'Running host updates...'
 
 case ${TDISTRO} in
-  centos)
+  centos|redhat)
     echo 'Running yum update on host'
     yum clean all
     yum makecache
