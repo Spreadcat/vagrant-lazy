@@ -1,6 +1,6 @@
 #!/bin/bash
 
-YUMPACKAGES='vim screen tcpdump tree telnet'
+YUMPACKAGES='vim screen tcpdump tree telnet bash-completion'
 APTPACKAGES='vim screen tcpdump tree telnet'
 
 echo "Installing tools"
