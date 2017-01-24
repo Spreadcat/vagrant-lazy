@@ -6,7 +6,7 @@ APTPACKAGES='vim screen tcpdump tree telnet'
 echo "Installing tools"
 
 case "${TDISTRO}" in
-  centos)
+  centos|redhat)
     yum install -y ${YUMPACKAGES}
     timedatectl set-timezone Europe/Oslo
     ;;

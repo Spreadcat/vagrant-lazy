@@ -64,6 +64,14 @@ if [[ $hostname != '' ]]; then
           ;;
       esac
       ;;
+    ubuntu)
+      case ${TRELEASE} in
+        16.04)
+          echo "Setting hostname to ${hostname}."
+          hostnamectl set-hostname ${hostname}
+          ;;
+      esac
+      ;;
   esac
 fi
 
